@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>Hello from the Apartment app</h1>
-<div class="root"></div>
+<div class="root" id="root"></div>
   <?php
     // //initialize curl
     // $ch = curl_init();
