@@ -10,20 +10,37 @@
   <h1>Hello from the Apartment app</h1>
 
   <?php
-    //initialize curl
-    $data = curl_init();
+    // //initialize curl
+    // $ch = curl_init();
+    $url = 'http://rentcafe.com/rentcafeapi.aspx?requestType=apartmentavailability&APIToken=NDY5OTI%3d-XDY6KCjhwhg%3d&propertyCode=p0155985';
 
-    //set url
-    curl_setopt($data, CURLOPT_URL, "http://rentcafe.com/rentcafeapi.aspx?requestType=apartmentavailability&APIToken=NDY5OTI%3d-XDY6KCjhwhg%3d&propertyCode=p0155985");
-    print_r($data, true);
+    $result = file_get_contents($url);
+    var_dump($result, true);
+
+    //
+    // // disable ssl
+    // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    //
+    // // return response
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //
+    // //set url
+    // curl_setopt($ch, CURLOPT_URL, $url);
+    //
+    // // execute
+    // $result = curl_exec($ch);
+    //
+    // // close curl
+    // curl_close($ch)
+    // print_r($ch, true);
     // return transfer as a string
-    // curl_setopt($data, CURL_OPTRETURNTRANSFER, 1);
+    // curl_setopt($ch, CURL_OPTRETURNTRANSFER, 1);
 
     // contains output string
-    // $output = curl_exec($data);
+    //
 
     //close curl to free up resources
-    curl_close($data)
+
 
 
    ?>
