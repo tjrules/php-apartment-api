@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
   <h1>Hello from the Apartment app</h1>
-<div class="root" id="root"></div>
+<div class="wrapper" id="root">
+  <table id="table">
+    <tr>
+      <th>Apartment Name</th>
+      <th>Beds</th>
+      <th>Baths</th>
+      <th>Floorplan</th>
+      <th>Maximum Rent</th>
+      <th>Minimum Rent</th>
+      <th>Application Link</th>
+    </tr>
+  </table>
+</div>
   <?php
     // //initialize curl
     // $ch = curl_init();
